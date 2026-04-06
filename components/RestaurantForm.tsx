@@ -14,18 +14,19 @@ export default function RestaurantForm() {
   const [phone, setPhone] = useState('')
   const [phoneValid, setPhoneValid] = useState(false)
   const [quartier, setQuartier] = useState('')
+  const [type, setType] = useState('')
   const [error, setError] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    if (!nom.trim() || !resto.trim() || !phoneValid || !quartier) { setError(true); return }
+    if (!nom.trim() || !resto.trim() || !phoneValid || !quartier || !type) { setError(true); return }
     setError(false)
 
     fetch('/api/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ type: 'restaurant', nom_gerant: nom.trim(), nom_restaurant: resto.trim(), phone, quartier }),
+      body: JSON.stringify({ type: 'restaurant', nom_gerant: nom.trim(), nom_restaurant: resto.trim(), phone, quartier, type_etablissement: type }),
     }).catch(() => {})
 
     setSubmitted(true)
@@ -88,6 +89,33 @@ export default function RestaurantForm() {
           variant="dark"
           onChange={(raw, _fmt, valid) => { setPhone(raw); setPhoneValid(valid) }}
         />
+
+        <div>
+          <label className="block text-sm font-medium mb-2" style={{ color: 'var(--cream-muted)' }}>
+            Type d&apos;établissement *
+          </label>
+          <div className="grid grid-cols-2 gap-2">
+            {[
+              { value: 'formel', label: 'Restaurant formel', sub: 'Boutique, snack, maquis…' },
+              { value: 'maison', label: 'Cuisine maison', sub: 'Vous cuisinez chez vous' },
+            ].map((t) => (
+              <button
+                key={t.value}
+                type="button"
+                onClick={() => setType(t.value)}
+                className="py-2.5 px-3 rounded-xl text-left transition-all"
+                style={{
+                  background: type === t.value ? 'rgba(249,115,22,0.15)' : 'rgba(255,255,255,0.05)',
+                  border: type === t.value ? '1.5px solid var(--fire)' : '1.5px solid rgba(255,255,255,0.1)',
+                  cursor: 'pointer',
+                }}
+              >
+                <div className="text-sm font-medium" style={{ color: type === t.value ? 'var(--fire)' : 'var(--cream)' }}>{t.label}</div>
+                <div className="text-xs mt-0.5" style={{ color: 'var(--cream-muted)' }}>{t.sub}</div>
+              </button>
+            ))}
+          </div>
+        </div>
 
         <div>
           <label htmlFor="r_quartier" className="block text-sm font-medium mb-1.5" style={{ color: 'var(--cream-muted)' }}>
