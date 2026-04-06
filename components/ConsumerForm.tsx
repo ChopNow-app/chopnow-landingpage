@@ -5,7 +5,7 @@ import PhoneInput from './PhoneInput'
 
 const QUARTIERS = [
   'Makepe', 'Bonamoussadi', 'Akwa', 'Bali',
-  'Bonapriso', 'Deido', 'Ndogbong', 'Logpom', 'Autre quartier',
+  'Bonapriso', 'Deido', 'Ndogbong', 'Logpom', 'Newbell', 'Autre quartier',
 ]
 
 const TOTAL = 247   // update weekly as real signups come in
