@@ -4,6 +4,7 @@ import './globals.css'
 import ScrollReveal from '@/components/ScrollReveal'
 import Countdown from '@/components/Countdown'
 import MobileStickyBar from '@/components/MobileStickyBar'
+import { Analytics } from '@vercel/analytics/next'
 
 const abrilFatface = Abril_Fatface({
   subsets: ['latin'],
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <MobileStickyBar />
         <ScrollReveal />
+        <Analytics />
       </body>
     </html>
   )
