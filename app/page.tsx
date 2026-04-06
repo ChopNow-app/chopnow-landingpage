@@ -472,7 +472,7 @@ function WaitlistSection() {
               Liste d&apos;attente
             </p>
             <div className="flex items-end gap-3 mb-3">
-              <Counter target={247} />
+              <Counter />
               <span className="text-lg font-medium pb-2" style={{ color: '#6B6560' }}>personnes</span>
             </div>
             <p className="text-base font-medium mb-1" style={{ color: '#3D3530' }}>

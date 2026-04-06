@@ -2,19 +2,33 @@
 
 import { useEffect, useRef, useState } from 'react'
 
-interface CounterProps {
-  target: number
-  duration?: number
-}
+const BASE = 247
 
-export default function Counter({ target, duration = 1400 }: CounterProps) {
+export default function Counter({ duration = 1400 }: { duration?: number }) {
+  const [target, setTarget] = useState(BASE)
   const [value, setValue] = useState(0)
   const ref = useRef<HTMLSpanElement>(null)
   const started = useRef(false)
 
+  // Fetch real count from Supabase and add to base
+  useEffect(() => {
+    fetch('/api/count')
+      .then((r) => r.json())
+      .then(({ count }) => {
+        if (typeof count === 'number' && count > 0) {
+          setTarget(BASE + count)
+        }
+      })
+      .catch(() => {})
+  }, [])
+
+  // Animate counter when in view
   useEffect(() => {
     const el = ref.current
     if (!el) return
+
+    started.current = false
+    setValue(0)
 
     const observer = new IntersectionObserver(
       ([entry]) => {
