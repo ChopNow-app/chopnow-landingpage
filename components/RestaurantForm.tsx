@@ -105,7 +105,7 @@ export default function RestaurantForm() {
                 onClick={() => setType(t.value)}
                 className="py-2.5 px-3 rounded-xl text-left transition-all"
                 style={{
-                  background: type === t.value ? 'rgba(249,115,22,0.15)' : 'rgba(255,255,255,0.05)',
+                  background: type === t.value ? 'rgba(225,29,42,0.15)' : 'rgba(255,255,255,0.05)',
                   border: type === t.value ? '1.5px solid var(--fire)' : '1.5px solid rgba(255,255,255,0.1)',
                   cursor: 'pointer',
                 }}

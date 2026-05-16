@@ -9,7 +9,7 @@
   --border: #2E2820;
   --cream: #F0EBE0;
   --cream-muted: #9A938A;
-  --fire: #F97316;
+  --fire: #E11D2A;
   --spark: #BDEF4F;
   --gold: #C9973E;
   --font-display: var(--font-abril);
@@ -132,14 +132,14 @@ body::after {
   border: none;
   cursor: pointer;
   transition: all 0.18s ease;
-  box-shadow: 0 4px 24px rgba(249, 115, 22, 0.3);
+  box-shadow: 0 4px 24px rgba(225, 29, 42, 0.3);
   -webkit-tap-highlight-color: transparent;
   margin-top: 4px;
 }
 .btn-submit:hover {
-  background: var(--fire-dark, #EA6A08);
+  background: var(--fire-dark, #B01620);
   transform: translateY(-1px);
-  box-shadow: 0 6px 32px rgba(249, 115, 22, 0.42);
+  box-shadow: 0 6px 32px rgba(225, 29, 42, 0.42);
 }
 
 /* ─── Badge ──────────────────────────────────────── */
@@ -148,7 +148,7 @@ body::after {
   align-items: center;
   gap: 7px;
   background: rgba(240, 235, 224, 0.05);
-  border: 1px solid rgba(249, 115, 22, 0.35);
+  border: 1px solid rgba(225, 29, 42, 0.35);
   border-radius: 999px;
   padding: 5px 14px;
   font-size: 12.5px;
@@ -175,7 +175,7 @@ body::after {
   font-family: var(--font-abril), serif;
   font-size: 64px;
   line-height: 1;
-  background: linear-gradient(180deg, var(--fire) 0%, rgba(249, 115, 22, 0.2) 100%);
+  background: linear-gradient(180deg, var(--fire) 0%, rgba(225, 29, 42, 0.2) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -188,8 +188,8 @@ body::after {
   height: 48px;
   min-width: 48px;
   border-radius: 14px;
-  background: rgba(249, 115, 22, 0.12);
-  border: 1px solid rgba(249, 115, 22, 0.25);
+  background: rgba(225, 29, 42, 0.12);
+  border: 1px solid rgba(225, 29, 42, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -224,7 +224,7 @@ body::after {
 }
 .input-field:focus {
   border-color: var(--fire);
-  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+  box-shadow: 0 0 0 3px rgba(225, 29, 42, 0.1);
 }
 .input-field::placeholder { color: #a1a1aa; }
 
@@ -253,7 +253,7 @@ select.input-field {
 }
 .input-field-dark:focus {
   border-color: var(--fire);
-  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+  box-shadow: 0 0 0 3px rgba(225, 29, 42, 0.12);
 }
 .input-field-dark::placeholder { color: rgba(240, 235, 224, 0.3); }
 select.input-field-dark {

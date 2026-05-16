@@ -109,7 +109,7 @@ export default function LivreurForm() {
                 onClick={() => setVehicule(v.value)}
                 className="flex-1 py-2.5 px-3 rounded-xl text-sm font-medium transition-all"
                 style={{
-                  background: vehicule === v.value ? 'rgba(249,115,22,0.15)' : 'rgba(255,255,255,0.05)',
+                  background: vehicule === v.value ? 'rgba(225,29,42,0.15)' : 'rgba(255,255,255,0.05)',
                   border: vehicule === v.value ? '1.5px solid var(--fire)' : '1.5px solid rgba(255,255,255,0.1)',
                   color: vehicule === v.value ? 'var(--fire)' : 'var(--cream-muted)',
                   cursor: 'pointer',

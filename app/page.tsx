@@ -64,7 +64,7 @@ function Hero() {
     <section className="relative overflow-hidden min-h-[90vh] flex items-center px-4 sm:px-6 pt-10 pb-16">
 
       {/* Atmospheric blobs */}
-      <div className="hero-glow" style={{ width: 520, height: 520, background: 'rgba(249, 115, 22, 0.06)', top: '-150px', right: '-120px' }} />
+      <div className="hero-glow" style={{ width: 520, height: 520, background: 'rgba(225, 29, 42, 0.06)', top: '-150px', right: '-120px' }} />
       <div className="hero-glow" style={{ width: 280, height: 280, background: 'rgba(189, 239, 79, 0.04)', bottom: '80px', left: '-80px' }} />
 
       <div className="max-w-5xl mx-auto w-full">
@@ -183,7 +183,7 @@ function Hero() {
               >
                 <div
                   className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
-                  style={{ background: 'rgba(249,115,22,0.12)' }}
+                  style={{ background: 'rgba(225,29,42,0.12)' }}
                 >
                   <IconMomoLarge />
                 </div>
@@ -371,7 +371,7 @@ function ProblemSection() {
             >
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[18px]"
-                style={{ background: 'radial-gradient(circle at 50% 0%, rgba(249,115,22,0.06) 0%, transparent 70%)' }}
+                style={{ background: 'radial-gradient(circle at 50% 0%, rgba(225,29,42,0.06) 0%, transparent 70%)' }}
               />
               <div className="problem-num mb-3">{p.num}</div>
               <div className="mb-3">{p.icon}</div>

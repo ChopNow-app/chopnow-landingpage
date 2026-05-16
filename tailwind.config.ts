@@ -24,8 +24,8 @@ const config: Config = {
           muted: '#9A938A',
         },
         fire: {
-          DEFAULT: '#F97316',
-          dark: '#EA6A08',
+          DEFAULT: '#E11D2A',
+          dark: '#B01620',
         },
         spark: {
           DEFAULT: '#BDEF4F',
